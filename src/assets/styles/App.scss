@@ -1,9 +1,95 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root{
+    /* Colors */
+    --main-bg-color: rgba(255, 255, 255, 1);
+    --primary-btn-color: rgba(51, 51, 51, 0.88);;
+
+    /* Fonts */
+    --main-font: 'Roboto', sans-serif;
+    --title-font: 'Pacifico', cursive;
+
+    /* Mobile font-sizes and line-heights (Mobile first approach) */
+    font-size: 16px; /*Base-Reference font size*/
+    --main-title-font-sm: 1.875rem;
+} 
+
+/* || General Styles */
+* {
     box-sizing: border-box;
-    margin:0;
-    padding:0;
+    padding: 0;
+    margin: 0;
+    font-family: var(--main-font);
+    //border: 0 none;
+	//outline: 0;
 }
 
-h1{
-    
+.Header{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    padding: 0.625rem 1rem;
+}
+
+.Filter__Countries{
+     grid-area: countries;   
+}
+
+.Filter__DateFrom{
+    grid-area: date-from;
+}
+
+.Filter__DateTo{
+    grid-area: date-to;
+}
+
+.Filter__Sizes{
+    grid-area: sizes;
+}
+
+.Filter__Prices{
+    grid-area: prices;
+}
+
+.Filter__Clear{
+    grid-area: clear;
+    justify-self: flex-end;
+    border: 1px solid #FFFFFF;
+
+}
+
+.Filter__Grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "countries countries"
+    "date-from date-to"
+    "prices sizes"
+    ". clear";
+    gap: 0.312rem;    
+}
+
+.Filter__Container{
+    padding: 0.625rem;
+    width: 100%;
+    background-color: rgba(228, 228, 234, .8);
+    border-radius: 0.375rem;
+}
+
+.Filter__Grid > * {
+    height: 1.875rem;
+}
+
+.Filter__Icon{
+    position: absolute;
+    top: 1.125rem;
+    right: 1rem;
+    height: 1.5rem;
+}
+
+.Title{
+    font-family: var(--title-font);
+    font-size: var(--main-title-font-sm);
 }
