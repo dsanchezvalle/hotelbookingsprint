@@ -1,0 +1,26 @@
+.Main{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    background-color: var(--main-bg-color);
+    overflow-y: scroll;
+    height: 100vh;    
+}
+
+.HotelsContainer{
+    background-color: lightgrey;
+}
+
+.HotelCard{
+    height: 99px;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    background-color: lightseagreen;
+    padding: 1rem;    
+}
+
+.HotelCard:last-child{
+    margin-bottom: 0.75rem;    
+}    

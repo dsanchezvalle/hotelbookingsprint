@@ -1,13 +1,30 @@
 import React from 'react';
+import '../../assets/styles/Main/Main.scss'
 
 const Main = () => {
     return (
         <>
-        <div className="CardGrid">
-            <p>Card</p>
-            <p>Card</p>
-            <p>Card</p>
-        </div>
+        <main className="Main">
+        <section className="HotelsContainer">
+                <article className="HotelCard">Hotel 1</article>
+                <article className="HotelCard">Hotel 2</article>
+                <article className="HotelCard">Hotel 3</article>
+                <article className="HotelCard">Hotel 1</article>
+                <article className="HotelCard">Hotel 2</article>
+                <article className="HotelCard">Hotel 3</article><article className="HotelCard">Hotel 1</article>
+                <article className="HotelCard">Hotel 2</article>
+                <article className="HotelCard">Hotel 3</article><article className="HotelCard">Hotel 1</article>
+                <article className="HotelCard">Hotel 2</article>
+                <article className="HotelCard">Hotel 3</article><article className="HotelCard">Hotel 1</article>
+                <article className="HotelCard">Hotel 2</article>
+                <article className="HotelCard">Hotel 3</article><article className="HotelCard">Hotel 1</article>
+                <article className="HotelCard">Hotel 2</article>
+                <article className="HotelCard">Hotel 3</article><article className="HotelCard">Hotel 1</article>
+                <article className="HotelCard">Hotel 2</article>
+                <article className="HotelCard">Hotel 3</article>
+        </section>   
+                {/* <HotelList /> */}
+        </main>
         </>
     );
 }
