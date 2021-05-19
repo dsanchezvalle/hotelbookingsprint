@@ -1,6 +1,4 @@
 .Main{
-    display: flex;
-    flex-direction: column;
     padding: 0 1rem;
     background-color: var(--main-bg-color);
     overflow-y: scroll;
@@ -8,11 +6,13 @@
 }
 
 .HotelsContainer{
+    display: flex;
+    flex-direction: column;
     background-color: lightgrey;
 }
 
 .HotelCard{
-    height: 99px;
+    height: 31.25vw;
     width: 100%;
     border: 1px solid grey;
     border-radius: 1rem;
@@ -24,3 +24,68 @@
 .HotelCard:last-child{
     margin-bottom: 0.75rem;    
 }    
+
+/* || Media Query Main--600 */
+@media screen and (min-width: 600px) {
+    .HotelCard{
+        height: 25vw;
+    }
+
+}
+
+/* || Media Query Main--840 */
+@media screen and (min-width: 840px) {
+    .Main{
+        padding: 0 1.5rem;
+    }
+
+    .HotelsContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+    }
+
+    .HotelCard{
+        height: 28vw;
+    }
+
+}
+
+/* || Media Query Main--1024 */
+@media screen and (min-width: 1024px) {
+    .Main{
+        padding: 0 3rem;
+    }
+    
+    .HotelsContainer{
+        column-gap: 1.5rem;
+    }
+
+    .HotelCard{
+        height: 28.5vw;
+        margin-top: 1.5rem;
+    }
+       
+}
+
+/* || Media Query Main--1200 */
+@media screen and (min-width: 1200px) {
+    .Main{
+        padding: 0 1rem;
+    }
+    
+    .HotelsContainer{
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1.2rem;
+    }
+
+    .HotelCard{
+        height: 20.83vw;
+        margin-top: 1.2rem;
+    }
+}
+
+
+
+
+

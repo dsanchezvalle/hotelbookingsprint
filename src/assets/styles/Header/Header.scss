@@ -31,15 +31,27 @@
 }
 
 .Filter__Clear{
+    -webkit-appearance: none;
     grid-area: clear;
     justify-self: flex-end;
+    align-self: flex-end;
     border: 1px solid #FFFFFF;
 
+    width: 4.687rem;
+    height: 1.5rem !important;
+
+    background: rgba(51, 51, 51, 1);
+    border-radius: 0.375rem;
+
+    color:rgba(255, 255, 255, 1);
+    font-weight: 500;
+    font-size: var(--filter-btn-font-sm) !important;
+    
 }
 
 .Filter__Grid{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 49% 49%;
     grid-template-rows: auto;
     grid-template-areas: 
     "countries countries"
@@ -58,6 +70,7 @@
 
 .Filter__Grid > * {
     height: 1.875rem;
+    font-size: var(--filter-font-sm);
 }
 
 .Filter__Icon{
@@ -65,4 +78,85 @@
     top: 1.125rem;
     right: 1rem;
     height: 1.5rem;
+}
+
+/* || Media Query Title and Filter--600 */
+@media screen and (min-width: 600px) {
+
+    .Title{
+        font-size: var(--main-title-font-md);
+    }
+
+    .Filter__Grid{
+        grid-template-columns: 32% 32% 32%;
+        grid-template-areas: 
+        "countries date-from date-to"
+        "prices sizes clear"; 
+        column-gap:0.7rem;
+        row-gap: 0.3rem;
+    }
+    
+}
+
+/* || Media Query Header, Title and Filter--1024 */
+@media screen and (min-width: 1024px) {
+
+    .Header{
+        padding: 3rem 3rem 1.75rem;
+    }
+    
+    .Title{
+        font-size: var(--main-title-font-lg);
+        padding-bottom: 1rem;
+    }
+
+    .Filter__Container{
+        display: flex;
+        background-color: transparent;
+        justify-content: center;
+    }
+    
+    .Filter__Grid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+
+    .Filter__Grid > * {
+        height: 2.4rem;
+        max-width: 18rem;
+        flex:1;
+        font-size: var(--filter-font-lg);
+    }
+
+    .Filter__Clear{
+        height: 2.4rem !important;        
+        align-self: center;
+        max-width: 6.06rem;
+        border: 2px solid #FFFFFF;
+        border-radius: 0.5rem;
+
+        font-weight: bold;
+        font-size: var(--filter-font-btn-lg) !important;
+    }
+
+    .Filter__Icon{
+        display: none;
+    }
+    
+}
+
+/* || Media Query Title and Filter--1200 */
+@media screen and (min-width: 1200px) {
+    .Title{
+        font-size: var(--main-title-font-xl);
+        padding-bottom: 2.375rem;
+    }
+
+    .Filter__Grid > * {
+        height: 2.4rem;
+        font-size: var(--filter-font-xl);
+    }
+
 }
