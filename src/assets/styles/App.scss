@@ -20,8 +20,10 @@
     --filter-font-sm: 0.875rem;
     --filter-font-lg: 0.93rem;
     --filter-font-xl: 1.1rem;
-} 
 
+    --filter-font-btn-sm: var(--filter-font-sm);
+    --filter-font-btn-lg: 1.125rem;
+} 
 /* || General Styles */
 * {
     box-sizing: border-box;
