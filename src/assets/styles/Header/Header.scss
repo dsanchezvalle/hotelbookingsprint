@@ -34,7 +34,6 @@
     grid-area: clear;
     justify-self: flex-end;
     border: 1px solid #FFFFFF;
-
 }
 
 .Filter__Grid{
@@ -75,5 +74,26 @@
         grid-template-areas: 
         "countries date-from date-to"
         "prices sizes clear"; 
+    }
+}
+
+/* || Media Query Filter--1024 */
+@media screen and (min-width: 1024px) {
+
+    .Filter__Grid{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .Filter__Grid > * {
+        height: 2.125rem;
+        max-width: 13rem;
+        flex:1;
+    }
+
+    .Filter__Clear{
+        justify-self: center;
+        max-width: 6.06rem;
+        border: 1px solid #FFFFFF;
     }
 }
