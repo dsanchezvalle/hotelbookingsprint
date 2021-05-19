@@ -38,7 +38,7 @@
 
 .Filter__Grid{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 49% 49%;
     grid-template-rows: auto;
     grid-template-areas: 
     "countries countries"
@@ -57,6 +57,7 @@
 
 .Filter__Grid > * {
     height: 1.875rem;
+    font-size: 0.875rem;
 }
 
 .Filter__Icon{
@@ -66,8 +67,12 @@
     height: 1.5rem;
 }
 
-/* || Media Query Filter--600 */
+/* || Media Query Title and Filter--600 */
 @media screen and (min-width: 600px) {
+
+    .Title{
+        font-size: var(--main-title-font-md);
+    }
 
     .Filter__Grid{
         grid-template-columns: 32% 32% 32%;
@@ -80,8 +85,17 @@
     
 }
 
-/* || Media Query Filter--1024 */
+/* || Media Query Header, Title and Filter--1024 */
 @media screen and (min-width: 1024px) {
+
+    .Header{
+        padding: 3rem 3rem 1.75rem;
+    }
+    
+    .Title{
+        font-size: var(--main-title-font-lg);
+        padding-bottom: 1rem;
+    }
 
     .Filter__Container{
         display: flex;
@@ -96,9 +110,10 @@
     }
 
     .Filter__Grid > * {
-        height: 2.125rem;
-        max-width: 15rem;
+        height: 2.4rem;
+        max-width: 18rem;
         flex:1;
+        font-size: 0.93rem;
     }
 
     .Filter__Clear{
@@ -111,4 +126,18 @@
         display: none;
     }
     
+}
+
+/* || Media Query Title and Filter--1200 */
+@media screen and (min-width: 1200px) {
+    .Title{
+        font-size: var(--main-title-font-xl);
+        padding-bottom: 2.375rem;
+    }
+
+    .Filter__Grid > * {
+        height: 2.4rem;
+        font-size: 1.1rem;
+    }
+
 }
