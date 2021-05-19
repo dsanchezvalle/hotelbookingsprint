@@ -70,24 +70,34 @@
 @media screen and (min-width: 600px) {
 
     .Filter__Grid{
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: 32% 32% 32%;
         grid-template-areas: 
         "countries date-from date-to"
         "prices sizes clear"; 
+        column-gap:0.7rem;
+        row-gap: 0.3rem;
     }
+    
 }
 
 /* || Media Query Filter--1024 */
 @media screen and (min-width: 1024px) {
 
+    .Filter__Container{
+        display: flex;
+        background-color: transparent;
+        justify-content: center;
+    }
+    
     .Filter__Grid{
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        flex: 1;
     }
 
     .Filter__Grid > * {
         height: 2.125rem;
-        max-width: 13rem;
+        max-width: 15rem;
         flex:1;
     }
 
