@@ -57,7 +57,7 @@
 
 .Filter__Grid > * {
     height: 1.875rem;
-    font-size: 0.875rem;
+    font-size: var(--filter-font-sm);
 }
 
 .Filter__Icon{
@@ -113,7 +113,7 @@
         height: 2.4rem;
         max-width: 18rem;
         flex:1;
-        font-size: 0.93rem;
+        font-size: var(--filter-font-lg);
     }
 
     .Filter__Clear{
@@ -137,7 +137,7 @@
 
     .Filter__Grid > * {
         height: 2.4rem;
-        font-size: 1.1rem;
+        font-size: var(--filter-font-xl);
     }
 
 }
