@@ -94,6 +94,25 @@
 @media screen and (min-width: 600px) {
     .HotelCard{
         height: 25vw;
+        padding: 1.375rem 1.625rem 1rem; 
+    }
+
+    .HotelCard__Title{
+        font-size: 1.75rem;
+    }
+
+
+    .HotelCard__Flag{
+        width: 1.187rem;
+    }
+
+    .HotelCard__CountryName{
+        font-size: 1rem;
+    }
+
+    .HotelCard__Button{
+        width: 5.5rem;
+        font-size: 1rem;
     }
 
 }
