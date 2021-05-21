@@ -90,13 +90,13 @@
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
     border-radius: 6px;
-    margin-top: -0.687rem;
+    margin-top: -1rem;
     margin-right: -0.25rem;
     padding: 0.7% 0;
 }
 
-/* || Media Query Main--600 */
-@media screen and (min-width: 600px) {
+/* || Media Query Main--480 */
+@media screen and (min-width: 480px) {
     .HotelCard{
         height: 25vw;
         padding: 1.375rem 1.625rem 1rem; 
@@ -105,7 +105,6 @@
     .HotelCard__Title{
         font-size: 1.75rem;
     }
-
 
     .HotelCard__Flag{
         width: 1.187rem;
@@ -119,8 +118,8 @@
         width: 5.5rem;
         font-size: 1rem;
         border: 2px solid #FFFFFF;
+        margin-top: -1.5rem;
     }
-
 }
 
 /* || Media Query Main--840 */
