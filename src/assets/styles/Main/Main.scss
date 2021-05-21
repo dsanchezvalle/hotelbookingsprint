@@ -36,6 +36,7 @@
 
 .HotelCard__Numbers{
     display: flex;
+    justify-content: left;
 }
 
 .HotelCard__Country{
@@ -71,7 +72,11 @@
 }
 
 .HotelCard__Price{
-    padding-left: 0.625rem;
+    padding-left: 0.375rem;
+}
+
+.HotelCard__Rooms{
+    padding-right: 0.375rem;
 }
 
 .HotelCard__Button{
@@ -135,12 +140,7 @@
         justify-content: flex-end;
     }
 
-    .HotelCard__Title{
-        font-size: 2rem;
-    }
-
     .HotelCard__Info{
-        //background-color: aqua;
         flex: none;
     }
 
@@ -169,16 +169,25 @@
 /* || Media Query Main--1024 */
 @media screen and (min-width: 1024px) {
     .Main{
-        padding: 0 3rem;
+        padding: 0 1.5rem;
     }
     
     .HotelsContainer{
-        column-gap: 1.5rem;
+        column-gap: 1rem;
     }
 
     .HotelCard{
-        height: 28.5vw;
+        height: 27.44vw;
         margin-top: 1.5rem;
+        padding: 2rem;
+    }
+
+    .HotelCard__Title{
+        font-size: 2rem;
+    }
+
+    .HotelCard__Button{
+        margin-top: -2rem;
     }
        
 }

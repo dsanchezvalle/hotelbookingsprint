@@ -10,7 +10,8 @@ const HotelCard = () => {
                     <p className="HotelCard__CountryName">Argentina</p> 
                 </div>
                 <div className="HotelCard__Numbers">
-                    <p className="HotelCard__Rooms">22 Rooms -</p>
+                    <p className="HotelCard__Rooms">22 rooms</p>
+                    -
                     <p className="HotelCard__Price">$$$$</p>
                 </div>
                 <p className="HotelCard__Description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis assumenda suscipit, consequuntur possimus mollitia minima commodi eius eos, temporibus porro sequi id ad molestiae dolores ea perferendis. Adipisci, voluptas magni?</p>
