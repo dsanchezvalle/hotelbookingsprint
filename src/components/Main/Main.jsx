@@ -1,26 +1,12 @@
 import React from 'react';
 import '../../assets/styles/Main/Main.scss'
-import HotelCard from './HotelCard/HotelCard'
+import HotelList from './HotelList/HotelList';
 
 const Main = () => {
     return (
         <>
         <main className="Main">
-        <section className="HotelsContainer">
-               <HotelCard />
-               <HotelCard />
-               <HotelCard />
-               <HotelCard />
-               <HotelCard />
-               <HotelCard />
-               <HotelCard />
-               <HotelCard />
-               <HotelCard />
-               <HotelCard />
-               <HotelCard />
-               <HotelCard />
-        </section>   
-                {/* <HotelList /> */}
+            <HotelList />
         </main>
         </>
     );
