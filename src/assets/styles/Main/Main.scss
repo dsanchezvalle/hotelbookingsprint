@@ -113,6 +113,7 @@
     .HotelCard__Button{
         width: 5.5rem;
         font-size: 1rem;
+        border: 2px solid #FFFFFF;
     }
 
 }
@@ -120,7 +121,7 @@
 /* || Media Query Main--840 */
 @media screen and (min-width: 840px) {
     .Main{
-        padding: 0 1.5rem;
+        padding: 0 1rem;
     }
 
     .HotelsContainer{
@@ -131,6 +132,36 @@
 
     .HotelCard{
         height: 28vw;
+        justify-content: flex-end;
+    }
+
+    .HotelCard__Title{
+        font-size: 2rem;
+    }
+
+    .HotelCard__Info{
+        //background-color: aqua;
+        flex: none;
+    }
+
+    .HotelCard__Flag{
+        width: 1.31rem;
+    }
+
+    .HotelCard__CountryName{
+        font-size: 1.12rem;
+        padding-left: 0.5rem;
+    }
+
+    .HotelCard__Numbers{
+        font-size: 1.12rem;
+    }
+
+    .HotelCard__Button{
+        border: 2px solid #FFFFFF;
+        padding: 1% 0;
+        margin-top: -1.5rem;
+        border-radius: 8px;
     }
 
 }
