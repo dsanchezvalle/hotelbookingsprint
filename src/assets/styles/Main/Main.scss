@@ -205,17 +205,26 @@
 
     .HotelCard{
         height: 20.83vw;
+        padding: 1.5rem 1rem 1.5rem 1.5rem;
         margin-top: 1.2rem;
         font-size: 1rem;
     }
 
     .HotelCard__Title{
-        font-size: 1.875rem;
-        font-weight: bold;
+        font-size: 1.75rem;
     }
 
+    .HotelCard__CountryName{
+        font-size: 1rem;
+    }
 
+    .HotelCard__Flag{
+        width: 1.19rem;
+    }
 
+    .HotelCard__Numbers{
+        font-size: 1rem;
+    }
 }
 
 
