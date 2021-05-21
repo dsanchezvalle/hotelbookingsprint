@@ -1,4 +1,5 @@
 import React from 'react';
+import getPriceSigns from '../../../assets/utils.js'
 
 const HotelCard = ({name, country, rooms, price, description}) => {
     return (
@@ -12,7 +13,7 @@ const HotelCard = ({name, country, rooms, price, description}) => {
                 <div className="HotelCard__Numbers">
                     <p className="HotelCard__Rooms">{rooms} rooms</p>
                     -
-                    <p className="HotelCard__Price">${price}</p>
+                    <p className="HotelCard__Price">{getPriceSigns(price)}</p>
                 </div>
                 <p className="HotelCard__Description">{description}</p>
             </section>
@@ -22,3 +23,4 @@ const HotelCard = ({name, country, rooms, price, description}) => {
 }
 
 export default HotelCard;
+  
