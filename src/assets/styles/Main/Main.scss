@@ -98,7 +98,24 @@
 /* || Media Query Main--480 */
 @media screen and (min-width: 480px) {
     .HotelCard{
-        height: 25vw;
+        height: 25vw; 
+    }
+
+    .HotelCard__Title{
+        font-size: 1.375rem;
+    }
+
+    .HotelCard__Button{
+        width: 4.5rem;
+        font-size: 0.875rem;
+        margin-top: -1.5rem;
+    }
+
+}
+
+/* || Media Query Main--600 */
+@media screen and (min-width: 600px) {
+    .HotelCard{
         padding: 1.375rem 1.625rem 1rem; 
     }
 
@@ -118,7 +135,6 @@
         width: 5.5rem;
         font-size: 1rem;
         border: 2px solid #FFFFFF;
-        margin-top: -1.5rem;
     }
 }
 
