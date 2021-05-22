@@ -1,5 +1,5 @@
 import React from 'react';
-import getPriceSigns from '../../../assets/utils.js'
+import {getPriceSigns, getCountryFlag} from '../../../assets/utils.js'
 
 const HotelCard = ({name, country, rooms, price, description}) => {
     return (
@@ -7,7 +7,7 @@ const HotelCard = ({name, country, rooms, price, description}) => {
             <h2 className="HotelCard__Title">{name}</h2>
             <section className="HotelCard__Info">
                 <div className="HotelCard__Country">
-                    <img src="https://cdn.countryflags.com/thumbs/argentina/flag-round-250.png" alt="(flag)" className="HotelCard__Flag" />
+                    <img src={require(`../../../assets/images/Main/Flags/${country.toLowerCase()}.svg`)} alt="(flag)" className="HotelCard__Flag" />
                     <p className="HotelCard__CountryName">{country}</p> 
                 </div>
                 <div className="HotelCard__Numbers">

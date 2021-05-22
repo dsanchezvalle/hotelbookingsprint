@@ -1,10 +1,11 @@
 import React from 'react';
 
+// Price Signs
 const PriceSign = () => {
     return '$';
   };
     
-function getPriceSigns(signs) {
+export const getPriceSigns = (signs) => {
     let priceSigns = [];
     for (let i = 0; i < signs; i++) {
       priceSigns.push(
@@ -16,5 +17,28 @@ function getPriceSigns(signs) {
     return priceSigns;
   }
 
-  export default getPriceSigns;
-  
+// Country Flags
+
+export const getCountryFlag = (country) => {
+  console.log(`../../../assets/images/Main/Flags/${country.toLowerCase()}.svg`);
+}
+
+/* const Flag = (props) => {
+  let flagString = `../../../assets/images/Main/Flags/${country.toLowerCase()}.svg`
+  return(
+    <>
+    
+    </>
+  );
+}
+
+export const getCountryFlag = (country) => {
+    return (
+      <Flag 
+      country = {country}
+      />
+    );
+}
+
+
+ */
