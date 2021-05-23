@@ -48,6 +48,10 @@ module.exports = {
                     },
                   
                 ],
+            },
+            {
+                test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+                type: 'asset/inline'
             }
             
         ]

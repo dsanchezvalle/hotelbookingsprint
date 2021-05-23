@@ -1,12 +1,17 @@
 import React from 'react';
-import {getPriceSigns, getCountryFlag} from '../../../assets/utils.js'
+import {getPriceSigns, getBackgroundImg} from '../../../assets/utils.js'
 
-const HotelCard = ({name, country, rooms, price, description}) => {
+const HotelCard = ({name, country, rooms, price, description, photo}) => {
+    
     return (
-        <article className="HotelCard">
+        <article className="HotelCard" style={
+            {
+               backgroundImage: getBackgroundImg(photo)
+            }
+         }>
             <h2 className="HotelCard__Title">{name}</h2>
             <section className="HotelCard__Info">
-                <div className="HotelCard__Country">
+                <div className="HotelCard__Country" >
                     <img src={require(`../../../assets/images/Main/Flags/${country.toLowerCase()}.svg`)} alt="(flag)" className="HotelCard__Flag" />
                     <p className="HotelCard__CountryName">{country}</p> 
                 </div>
@@ -23,4 +28,3 @@ const HotelCard = ({name, country, rooms, price, description}) => {
 }
 
 export default HotelCard;
-  
