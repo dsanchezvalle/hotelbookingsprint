@@ -15,14 +15,18 @@
     flex-flow: column nowrap;
     height: 31.25vw;
     width: 100%;
-    border: 2px solid grey;
     border-radius: 1rem;
     margin-top: 1rem;
     padding: 1rem;
-    background-color: #333333;
     color: rgba(255,255,255,1);
     font-size: 0.875rem;
     overflow: hidden;
+    object-fit: scale-down;
+    background-size: 100% 100%; //ajustar con media query
+}
+
+.test{
+    object-fit: cover;
 }
 
 .HotelCard:last-child{
@@ -68,6 +72,7 @@
 }
 
 .HotelCard__Numbers{
+    display: flex;
     padding-top: 0.31rem;
 }
 
