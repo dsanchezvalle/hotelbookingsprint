@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import HotelCard from '../HotelCard/HotelCard'
-import { hotelsData } from '../../../assets/data/data.js'
+//import { hotelsData } from '../../../assets/data/data.js'
 
-const HotelList = () => {
-
-const [hotelList, setHotelList] = useState(hotelsData);   
-
-const hotelList2 = hotelList.filter(hotel => hotel.country === "Brasil" && hotel.price === 3);
-
+const HotelList = ({filteredHotels}) => {
     return(
         <section className="HotelsContainer">
-            { hotelList2.map((hotel) => {
+            { filteredHotels.map((hotel) => {
                 return(
                     <HotelCard
                     key = {"h-" + hotel.name} 

@@ -16,7 +16,8 @@ export const getPriceSigns = (signs) => {
     }
     return priceSigns;
   }
-  
+ 
+  //HotelCard Background Images
  export const getBackgroundImg = (photo) => {
   let photoUrl = require("../assets/images/Main/Hotels/" + photo);
   if(window.innerWidth<840){

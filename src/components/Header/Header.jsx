@@ -4,8 +4,7 @@ import '../../assets/styles/Header/Header.scss';
 const Header = ({filters, onFilter}) => {
    
    const [countryFilter, priceFilter, sizeFilter] = filters;
-   console.log(countryFilter, priceFilter, sizeFilter); 
-   
+      
    const handleFilters = (e) => {
     onFilter(e.target.id, e.target.value); 
    }
