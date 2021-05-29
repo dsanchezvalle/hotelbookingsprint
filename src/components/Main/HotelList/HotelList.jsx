@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import HotelCard from '../HotelCard/HotelCard'
-//import { hotelsData } from '../../../assets/data/data.js'
 
 const HotelList = ({filteredHotels}) => {
-    return(
+    return filteredHotels.length > 0 ? 
+    (
         <section className="HotelsContainer">
             { filteredHotels.map((hotel) => {
                 return(
@@ -24,7 +24,12 @@ const HotelList = ({filteredHotels}) => {
             })    
             }
         </section>
-    );
+    ):(   
+        <section className="HotelsNotFound">
+            <img className="HotelsNotFound__Icon" src={require(`../../../assets/images/Main/InfoIcon/information.svg`)} alt="information icon" role="presentation" aria-hidden="true" focusable="false" />
+            <p className="HotelsNotFound__Message">No hotels left with those filters. Try a new combination of them. </p> 
+        </section>
+    )
 }
 
 export default HotelList;
