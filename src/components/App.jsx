@@ -21,6 +21,11 @@ const App = () => {
         } );
         setFilterList(newFilterList);
     }
+
+    const handleClearFilters = () =>{
+        setFilterList(filtersData);
+    }
+
     let filteredHotelList = filterHotels(hotelsData, filterList);
 
     return (
@@ -28,6 +33,7 @@ const App = () => {
             <Header 
                 filters = {filterList}
                 onFilter = {handleGlobalFilters}
+                onClearFilter = {handleClearFilters}
             />
             <Main
                 hotels = {<HotelList

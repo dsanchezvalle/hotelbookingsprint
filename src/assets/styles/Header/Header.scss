@@ -46,7 +46,11 @@
     color:rgba(255, 255, 255, 1);
     font-weight: 500;
     font-size: var(--filter-btn-font-sm) !important;
-    
+}
+
+.Filter__Clear:active{
+    transform: translateY(1px);
+      
 }
 
 .Filter__Grid{

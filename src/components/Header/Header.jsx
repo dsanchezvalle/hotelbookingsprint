@@ -1,12 +1,16 @@
 import React, {useState} from 'react';
 import '../../assets/styles/Header/Header.scss';
 
-const Header = ({filters, onFilter}) => {
+const Header = ({filters, onFilter, onClearFilter}) => {
    
    const [countryFilter, priceFilter, sizeFilter] = filters;
       
    const handleFilters = (e) => {
     onFilter(e.target.id, e.target.value); 
+   }
+
+   const handleClearButton = (e) => {
+    onClearFilter();
    }
  
     return (        
@@ -37,7 +41,7 @@ const Header = ({filters, onFilter}) => {
                         <option value="size2">Medium</option>
                         <option value="size3">Large</option>
                     </select>
-                    <button className="Filter__Clear">Clear</button>
+                    <button className="Filter__Clear" onClick={handleClearButton}>Clear</button>
                 </div>
             </div>
         </header>        
