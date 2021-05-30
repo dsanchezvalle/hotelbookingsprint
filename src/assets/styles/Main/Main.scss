@@ -100,6 +100,26 @@
     padding: 0.7% 0;
 }
 
+.HotelsNotFound{
+    display: flex;
+    align-items: center;
+    background-color: rgb(204,229,255);
+    color: rgb(0, 64, 133);
+    border: 1px solid rgb(184, 218, 255);
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    border-radius: 0.375rem;
+}
+
+.HotelsNotFound__Icon{
+    fill: rgb(0, 64, 133);
+    font-size: 0.875rem;
+    padding-right: 0.5rem;
+    height: auto;
+    width: 1.8rem;
+}
+
 /* || Media Query Main--480 */
 @media screen and (min-width: 480px) {
     .HotelCard{
@@ -182,6 +202,14 @@
         padding: 1% 0;
         margin-top: -1.5rem;
         border-radius: 8px;
+    }
+
+    .HotelsNotFound{
+        font-size: 1rem;
+    }
+
+    .HotelsNotFound__Icon{
+        width: 2.2rem;
     }
 
 }

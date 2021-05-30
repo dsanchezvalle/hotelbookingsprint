@@ -1,6 +1,21 @@
 
 const today = new Date();
 
+export const filtersData = [
+  {
+    id: "filter-countries",
+    value: "all"
+  },
+  {
+    id: "filter-prices",
+    value: "all"
+  },
+  {
+    id: "filter-sizes",
+    value: "all"
+  }
+];
+
 export const hotelsData = [
   {
     slug: 'la-bamba-de-areco',
