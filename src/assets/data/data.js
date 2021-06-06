@@ -13,6 +13,14 @@ export const filtersData = [
   {
     id: "filter-sizes",
     value: "all"
+  },
+  {
+    id: "date-from",
+    value: ""
+  },
+  {
+    id: "date-to",
+    value: ""
   }
 ];
 
