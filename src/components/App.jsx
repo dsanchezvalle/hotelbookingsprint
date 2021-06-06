@@ -27,7 +27,6 @@ const App = () => {
     }
 
     let filteredHotelList = filterHotels(hotelsData, filterList);
-
     return (
         <>
             <Header 
@@ -50,6 +49,8 @@ const filterHotels = (hotelList, filterList) => {
     let filteredHotelList = [];
     let filteredHotelList2 = [];
     let filteredHotelList3 = [];
+    let filteredHotelList4 = [];
+
     if(filterList[0].value === "all"){
       filteredHotelList = hotelList;  
     }
@@ -69,10 +70,25 @@ const filterHotels = (hotelList, filterList) => {
     }
     else{
         filteredHotelList3 = filteredHotelList2.filter(hotel => checkSizeWithRooms(filterList[2].value, hotel.rooms));
-
+    }
+    
+    if(filterList[3].value === "" || filterList[4].value === ""){
+        filteredHotelList4 = filteredHotelList3;
+    }
+    else{
+        if(verifyDateRange(getUnixDate(filterList[3].value), getUnixDate(filterList[4].value)) === "error"){
+            alert("Error. The check-out date cannot be earlier than the check-in date.")
+            filterList[3].value = "";
+            filterList[4].value = "";
+            return filteredHotelList3;
+        }
+        else if (!isNaN(getUnixDate(filterList[3].value)) && !isNaN(getUnixDate(filterList[4].value))){
+            filteredHotelList4 = filteredHotelList3.filter(hotel => 
+                checkAvailability(filterList[3].value, filterList[4].value, hotel));
+        }        
     }
   
-    return filteredHotelList3;  
+    return filteredHotelList4;  
 } 
 
 const getCountryName = (value) =>{
@@ -126,3 +142,31 @@ const checkSizeWithRooms = (size, rooms) => {
     }
 
 }
+
+const checkAvailability = (dateFrom, dateTo, hotel) => {
+    /*Lines 147 to 155:
+    We add hours in order to adjust the UTC offset between the dates selected 
+    by the user (in filters) and the given hotels' availability dates (in the database).*/
+    let newSelectedFromDate = new Date(dateFrom);
+    let newAvailabilityFrom = new Date(hotel.availabilityFrom);
+    let hoursToAdd = newAvailabilityFrom.getUTCHours() + 1;
+    newSelectedFromDate.setHours(newSelectedFromDate.getHours()+hoursToAdd);
+
+    let newSelectedToDate = new Date(dateTo);
+    let newAvailabilityTo = new Date(hotel.availabilityTo);
+    let hoursToAdd2 = newAvailabilityTo.getUTCHours();
+    newSelectedToDate.setHours(newSelectedToDate.getHours()+hoursToAdd2);
+
+    if((newSelectedFromDate.valueOf() >= newAvailabilityFrom.valueOf()) && (newSelectedToDate.valueOf() <= newAvailabilityTo.valueOf())){
+        return true;
+    }
+    else return false;
+}
+
+function verifyDateRange(dateFrom, dateTo) {
+    return dateFrom > dateTo ? "error" : "dates ok";
+  }
+
+  function getUnixDate(date) {
+    return new Date(date).getTime();
+  }  
