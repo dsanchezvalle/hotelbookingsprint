@@ -1,7 +1,7 @@
 .Header{
     display: flex;
     flex-direction: column;
-    background-color: aqua;
+    background-color: rgb(41, 23, 201);
     padding: 0.625rem 1rem;
 }
 
@@ -84,6 +84,10 @@
     height: 1.5rem;
 }
 
+.FoundMessage__Container{
+    display: none;
+}
+
 /* || Media Query Title and Filter--600 */
 @media screen and (min-width: 600px) {
 
@@ -100,6 +104,25 @@
         row-gap: 0.3rem;
     }
     
+}
+
+/* || Media Query Header--840 */
+@media screen and (min-width: 840px) {
+    .FoundMessage__Container{
+        display: block;
+        padding-top: 1rem;
+        color:rgba(255, 255, 255, 1);
+    }
+
+    .FoundMessage__Title{
+        font-family: var(--found-message-font);
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    .FoundMessage__Content{
+        padding: 0.6rem 0 0.5rem 0.2rem;
+    }
 }
 
 /* || Media Query Header, Title and Filter--1024 */
@@ -149,18 +172,36 @@
         display: none;
     }
     
+    .FoundMessage__Title{
+        font-size: 2.5rem;
+    }
+
+    .FoundMessage__Content{
+        padding: 0.6rem 0 0.5rem 0.2rem;
+        font-size: 1.125rem;
+    }
 }
 
 /* || Media Query Title and Filter--1200 */
 @media screen and (min-width: 1200px) {
     .Title{
         font-size: var(--main-title-font-xl);
-        padding-bottom: 2.375rem;
+        padding-bottom: 1.5rem;
     }
 
     .Filter__Grid > * {
         height: 2.4rem;
         font-size: var(--filter-font-xl);
+    }
+
+    .FoundMessage__Title{
+        font-size: 3rem;
+    }
+
+    .FoundMessage__Content{
+        padding: 0.6rem 0 0.5rem 0.2rem;
+        font-size: 1.375rem;
+        padding-top: 1rem;
     }
 
 }

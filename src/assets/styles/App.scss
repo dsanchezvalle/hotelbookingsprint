@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 :root{
     /* Colors */
@@ -9,6 +10,7 @@
     /* Fonts */
     --main-font: 'Roboto', sans-serif;
     --title-font: 'Pacifico', cursive;
+    --found-message-font: 'Dancing Script', cursive;
 
     /* Mobile font-sizes and line-heights (Mobile first approach) */
     font-size: 16px; /*Base-Reference font size*/
