@@ -44,6 +44,10 @@ const Header = ({filters, onFilter, onClearFilter}) => {
                     <button className="Filter__Clear" onClick={handleClearButton}>Clear</button>
                 </div>
             </div>
+            <div className="FoundMessage__Container">
+                <p className="FoundMessage__Title">We have found for you...</p>
+                <p className="FoundMessage__Content">Large-sized hotels of medium-budget prices, from February 11, 2021, to February 15, 2021, in all countries.</p>
+            </div>
         </header>        
     );
 }
