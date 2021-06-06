@@ -3,7 +3,7 @@ import '../../assets/styles/Header/Header.scss';
 
 const Header = ({filters, onFilter, onClearFilter}) => {
    
-   const [countryFilter, priceFilter, sizeFilter] = filters;
+   const [countryFilter, priceFilter, sizeFilter, dateFromFilter, dateToFilter] = filters;
       
    const handleFilters = (e) => {
     onFilter(e.target.id, e.target.value); 
@@ -26,8 +26,8 @@ const Header = ({filters, onFilter, onClearFilter}) => {
                         <option value="country3">Chile</option>
                         <option value="country4">Uruguay</option>
                     </select>
-                    <input className="Filter__DateFrom" name="date-from" type="date"/>
-                    <input className="Filter__DateTo" name="date-to" type="date"/>
+                    <input className="Filter__DateFrom" name="date-from" id="date-from" onChange={handleFilters} min={getFormattedToday()} max={dateToFilter.value} type="date" value={dateFromFilter.value}/>
+                    <input className="Filter__DateTo" name="date-to" id="date-to" onChange={handleFilters} type="date" min={dateFromFilter.value} value={dateToFilter.value}/>
                     <select className="Filter__Prices" onChange={handleFilters} name="filter-prices" id="filter-prices" value={priceFilter.value}>
                         <option value="all">All prices</option>
                         <option value="price1">$</option>
@@ -49,3 +49,19 @@ const Header = ({filters, onFilter, onClearFilter}) => {
 }
 
 export default Header;
+
+function getFormattedToday(){
+    return formatDate(new Date().toLocaleDateString());
+}
+
+function formatDate(date) {
+  var d = new Date(date),
+    month = "" + (d.getMonth() + 1),
+    day = "" + d.getDate(),
+    year = d.getFullYear();
+
+  if (month.length < 2) month = "0" + month;
+  if (day.length < 2) day = "0" + day;
+
+  return [year, month, day].join("-");
+}
