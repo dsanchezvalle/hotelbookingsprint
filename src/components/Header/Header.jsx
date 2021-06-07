@@ -46,7 +46,7 @@ const Header = ({filters, onFilter, onClearFilter}) => {
             </div>
             <div className="FoundMessage__Container">
                 <p className="FoundMessage__Title">We have found for you...</p>
-                <p className="FoundMessage__Content">Large-sized hotels of medium-budget prices, from February 11, 2021, to February 15, 2021, in all countries.</p>
+                <p className="FoundMessage__Content">{getSizeString(sizeFilter.value)} hotels of {getPriceString(priceFilter.value)} prices, {getDateString(dateFromFilter.value, dateToFilter.value)} in {getCountryString(countryFilter.value)}.</p>
             </div>
         </header>        
     );
@@ -68,4 +68,61 @@ function formatDate(date) {
   if (day.length < 2) day = "0" + day;
 
   return [year, month, day].join("-");
+}
+
+//Send to utils
+const getCountryString = (countryValue) =>{
+    switch(countryValue){
+        case "country1":
+            return "Argentina";
+        case "country2":
+            return "Brasil";
+        case "country3":
+            return "Chile";
+        case "country4":
+            return "Uruguay";
+        default:
+            return "all countries";
+    }
+}
+
+const getSizeString = (sizeValue) => {
+
+    switch(sizeValue){
+        case "size1":
+            return "Small-sized";
+        case "size2":
+            return "Medium-sized";
+        case "size3":
+            return "Large-sized";
+        case "all":
+            return "All sizes";    
+    }
+}
+
+const getPriceString = (priceValue) => {
+    switch(priceValue){
+        case "price1":
+            return "economic";
+        case "price2":
+            return "comfort";
+        case "price3":
+            return "premium";
+        case "price4":
+            return "deluxe";
+        case "all":
+            return "all category"                
+    }
+}
+
+const getDateString = (dateFromValue, dateToValue) =>{
+    
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    
+    if(dateFromValue !== "" && dateToValue !== ""){
+        let fromDate = new Intl.DateTimeFormat('en-US', options).format(new Date(dateFromValue));
+        let toDate = new Intl.DateTimeFormat('en-US', options).format(new Date(dateToValue));
+        return `from ${fromDate} to ${toDate}`;
+    }
+    return "";
 }
