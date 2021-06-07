@@ -144,18 +144,18 @@ const checkSizeWithRooms = (size, rooms) => {
 }
 
 const checkAvailability = (dateFrom, dateTo, hotel) => {
-    /*Lines 147 to 155:
+    /*Lines 150 to 158:
     We add hours in order to adjust the UTC offset between the dates selected 
     by the user (in filters) and the given hotels' availability dates (in the database).*/
     let newSelectedFromDate = new Date(dateFrom);
     let newAvailabilityFrom = new Date(hotel.availabilityFrom);
-    let hoursToAdd = newAvailabilityFrom.getUTCHours() + 1;
-    newSelectedFromDate.setHours(newSelectedFromDate.getHours()+hoursToAdd);
+    let hoursToAddFrom = newAvailabilityFrom.getHours() + (newSelectedFromDate.getTimezoneOffset()/60) + 1;
+    newSelectedFromDate.setHours(newSelectedFromDate.getHours()+hoursToAddFrom);
 
     let newSelectedToDate = new Date(dateTo);
     let newAvailabilityTo = new Date(hotel.availabilityTo);
-    let hoursToAdd2 = newAvailabilityTo.getUTCHours();
-    newSelectedToDate.setHours(newSelectedToDate.getHours()+hoursToAdd2);
+    let hoursToAddTo = newAvailabilityTo.getHours() + (newSelectedToDate.getTimezoneOffset()/60);
+    newSelectedToDate.setHours(newSelectedToDate.getHours()+hoursToAddTo); 
 
     if((newSelectedFromDate.valueOf() >= newAvailabilityFrom.valueOf()) && (newSelectedToDate.valueOf() <= newAvailabilityTo.valueOf())){
         return true;
@@ -170,3 +170,4 @@ function verifyDateRange(dateFrom, dateTo) {
   function getUnixDate(date) {
     return new Date(date).getTime();
   }  
+  
