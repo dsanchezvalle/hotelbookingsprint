@@ -117,12 +117,19 @@ const getPriceString = (priceValue) => {
 
 const getDateString = (dateFromValue, dateToValue) =>{
     
-    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    //Create and adjust dates to UTC Offset.
+    let dateFrom = new Date(dateFromValue);
+    dateFrom.setHours(dateFrom.getHours()+(dateFrom.getTimezoneOffset()/60));
+    let dateTo = new Date(dateToValue);
+    dateTo.setHours(dateTo.getHours()+(dateTo.getTimezoneOffset()/60));
     
+    //Define arguments to send to Intl.DateTimeFormat according to expected string
+    let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
     if(dateFromValue !== "" && dateToValue !== ""){
-        let fromDate = new Intl.DateTimeFormat('en-US', options).format(new Date(dateFromValue));
-        let toDate = new Intl.DateTimeFormat('en-US', options).format(new Date(dateToValue));
-        return `from ${fromDate} to ${toDate}`;
+        let dateFromString = new Intl.DateTimeFormat('en-US', options).format(dateFrom);
+        let dateToString = new Intl.DateTimeFormat('en-US', options).format(new Date(dateTo));
+        return `from ${dateFromString} to ${dateToString}`;
     }
     return "";
 }
