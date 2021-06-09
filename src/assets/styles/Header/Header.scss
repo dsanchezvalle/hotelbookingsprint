@@ -1,8 +1,13 @@
+
+
 .Header{
     display: flex;
     flex-direction: column;
     background-color: rgb(41, 23, 201);
+    background-image: radial-gradient(224.24% 668.5% at 14.41% -14.14%, rgba(0, 0, 0, 0.57) 44.5%, rgba(255, 255, 255, 0) 67.11%), url("../../images/Header/cover.png");
+    background-size: var(--header-bkgd-img-size-sm);
     padding: 0.625rem 1rem;
+    color: rgba(255, 255, 255, 1);
 }
 
 .Title{
@@ -91,6 +96,10 @@
 /* || Media Query Title and Filter--600 */
 @media screen and (min-width: 600px) {
 
+    .Header{
+        background-size: var(--header-bkgd-img-size-md);
+    }
+
     .Title{
         font-size: var(--main-title-font-md);
     }
@@ -130,8 +139,9 @@
 
     .Header{
         padding: 3rem 3rem 1.75rem;
+        background-size: var(--header-bkgd-img-size-lg);
     }
-    
+
     .Title{
         font-size: var(--main-title-font-lg);
         padding-bottom: 1rem;
@@ -203,5 +213,4 @@
         font-size: 1.375rem;
         padding-top: 1rem;
     }
-
 }
