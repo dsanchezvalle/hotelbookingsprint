@@ -25,6 +25,13 @@
 
     --filter-font-btn-sm: var(--filter-font-sm);
     --filter-font-btn-lg: 1.125rem;
+
+    --header-bkgd-img-size-sm: 100% 100%;
+    --header-bkgd-img-size-md: 100% 125%;
+    --header-bkgd-img-size-lg: 100% 150%;
+
+    --filter-icon-bkgd-size-sm: 0.875rem 1rem;
+    --filter-icon-bkgd-size-lg: 1rem 1rem;
 } 
 /* || General Styles */
 * {
@@ -32,6 +39,4 @@
     padding: 0;
     margin: 0;
     font-family: var(--main-font);
-    //border: 0 none;
-	//outline: 0;
 }

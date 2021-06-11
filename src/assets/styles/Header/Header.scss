@@ -2,7 +2,10 @@
     display: flex;
     flex-direction: column;
     background-color: rgb(41, 23, 201);
+    background-image: radial-gradient(224.24% 668.5% at 14.41% -14.14%, rgba(0, 0, 0, 0.57) 44.5%, rgba(255, 255, 255, 0) 67.11%), url("../../images/Header/cover.png");
+    background-size: var(--header-bkgd-img-size-sm);
     padding: 0.625rem 1rem;
+    color: rgba(255, 255, 255, 1);
 }
 
 .Title{
@@ -11,23 +14,55 @@
 }
 
 .Filter__Countries{
-     grid-area: countries;   
+     grid-area: countries;
+     background: url("../../images/Header/pin.svg");
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background:transparent;
+    bottom: 0;
+    color: transparent;
+    height: auto;
+    left: -1.75rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
 }
 
 .Filter__DateFrom{
     grid-area: date-from;
+    position: relative;
+    background: url("../../images/Header/checkin.svg") no-repeat;
+    border: 1px solid rgb(128, 128, 128);
+    padding-left: 1.5rem !important;
 }
 
 .Filter__DateTo{
     grid-area: date-to;
+    position: relative;
+    background: url("../../images/Header/checkout.svg") no-repeat;
+    border: 1px solid rgb(128, 128, 128);
+    padding-left: 1.5rem !important;
 }
 
 .Filter__Sizes{
     grid-area: sizes;
+    background: url("../../images/Header/rooms.svg");  
 }
 
 .Filter__Prices{
     grid-area: prices;
+    background: url("../../images/Header/price.svg");
+}
+
+.Filter-Icon{
+    background-size: var(--filter-icon-bkgd-size-sm);
+    padding-left: 1.25rem;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.75);
+    background-position-x: 0.312rem;
+    background-position-y: center;   
 }
 
 .Filter__Clear{
@@ -35,7 +70,7 @@
     grid-area: clear;
     justify-self: flex-end;
     align-self: flex-end;
-    border: 1px solid #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 1);
 
     width: 4.687rem;
     height: 1.5rem !important;
@@ -49,8 +84,7 @@
 }
 
 .Filter__Clear:active{
-    transform: translateY(1px);
-      
+    transform: translateY(1px); 
 }
 
 .Filter__Grid{
@@ -77,19 +111,16 @@
     font-size: var(--filter-font-sm);
 }
 
-.Filter__Icon{
-    position: absolute;
-    top: 1.125rem;
-    right: 1rem;
-    height: 1.5rem;
-}
-
 .FoundMessage__Container{
     display: none;
 }
 
 /* || Media Query Title and Filter--600 */
 @media screen and (min-width: 600px) {
+
+    .Header{
+        background-size: var(--header-bkgd-img-size-md);
+    }
 
     .Title{
         font-size: var(--main-title-font-md);
@@ -130,8 +161,9 @@
 
     .Header{
         padding: 3rem 3rem 1.75rem;
+        background-size: var(--header-bkgd-img-size-lg);
     }
-    
+
     .Title{
         font-size: var(--main-title-font-lg);
         padding-bottom: 1rem;
@@ -168,8 +200,8 @@
         font-size: var(--filter-font-btn-lg) !important;
     }
 
-    .Filter__Icon{
-        display: none;
+    .Filter-Icon{
+        background-size: var(--filter-icon-bkgd-size-lg);
     }
     
     .FoundMessage__Title{
@@ -203,5 +235,4 @@
         font-size: 1.375rem;
         padding-top: 1rem;
     }
-
 }
