@@ -37,7 +37,7 @@
     z-index:1;   
 }  
 
-.HotelCard:after{
+.HotelCard::after{
     position: absolute;
     content:"";
     height:100%;
@@ -68,6 +68,7 @@
 
 .HotelCard__Description{
    display: none;
+   margin-top: 0.5rem;
 }
 
 .HotelCard__Info{
@@ -234,6 +235,61 @@
     .HotelsNotFound__Icon{
         width: 2.2rem;
     }
+    
+    .HotelCard:hover{
+        justify-content: flex-start;
+        padding:1.5rem;
+    } 
+
+    .HotelCard:hover .HotelCard__Description{
+        display: flex;
+        max-width: 100%;
+        text-align: right;
+        font-size: 0.8rem;
+    } 
+
+    .HotelCard:hover .HotelCard__Info{
+        align-self: flex-end;
+        align-items: flex-end;
+        text-align: right;
+        flex-wrap:wrap;
+    }
+   
+    .HotelCard:hover .HotelCard__Title{
+        font-size: 1.5rem;
+        align-self: flex-end;
+        text-align: right;
+    }
+
+    .HotelCard:hover .HotelCard__Country-Numbers{
+        display: flex;
+        align-items: center;  
+    }
+
+    .HotelCard:hover .HotelCard__Country{
+        padding-top: 0;
+    }
+
+    .HotelCard:hover .HotelCard__Flag{
+        padding-right: 0.25rem;
+    }
+
+    .HotelCard:hover .HotelCard__CountryName{
+        display: none;
+    }
+
+    .HotelCard:hover .HotelCard__Numbers{
+        font-size: 0.8rem;
+        padding-top:0;
+    }
+
+    .HotelCard:hover::after{
+        background: radial-gradient(224.24% 668.5% at 14.41% -14.14%, rgba(0, 0, 0, 0.57) 44.5%, rgba(255, 255, 255, 0) 67.11%);
+    }
+
+    .HotelCard:hover .HotelCard__Button{
+        margin-top: 0.5rem;  
+    }
 
 }
 
@@ -259,8 +315,11 @@
 
     .HotelCard__Button{
         margin-top: -2rem;
-    }
-       
+    }    
+    
+    .HotelCard:hover .HotelCard__Description{
+        max-width: 75%;
+    } 
 }
 
 /* || Media Query Main--1200 */
@@ -275,10 +334,10 @@
     }
 
     .HotelCard{
-        height: 20.83vw;
+        height: 21.83vw;
         padding: 1.5rem 1rem 1.5rem 1.5rem;
         margin-top: 1.2rem;
-        font-size: 1rem;
+        font-size: 0.75rem;
     }
 
     .HotelCard__Title{
@@ -296,6 +355,29 @@
     .HotelCard__Numbers{
         font-size: 1rem;
     }
+
+    .HotelCard:hover .HotelCard__Description{
+        max-width: 100%;
+    } 
+}
+
+/* || Media Query Main--1440 */
+@media screen and (min-width: 1440px) {
+    
+    .HotelCard:hover .HotelCard__Title{
+        font-size: 1.75rem;
+    }    
+
+    .HotelCard:hover .HotelCard__Rooms, 
+    .HotelCard:hover .HotelCard__Price,
+    .HotelCard:hover .HotelCard__Description
+    {
+        font-size: 0.9rem;
+    }
+
+    .HotelCard:hover .HotelCard__Description{
+        max-width: 75%;
+    } 
 }
 
 
