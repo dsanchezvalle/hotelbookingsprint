@@ -4,11 +4,8 @@ import {getPriceSigns, getBackgroundImg} from '../../../assets/utils.js'
 const HotelCard = ({name, country, rooms, price, description, photo}) => {
     
     return (
-        <article className="HotelCard" style={
-            {
-               backgroundImage: getBackgroundImg(photo)
-            }
-         }>
+        <article className="HotelCard">
+            <img className="HotelCard__Img" src={require(`../../../assets/images/Main/Hotels/${photo}`)} alt="photoHotel" />
             <h2 className="HotelCard__Title">{name}</h2>
             <section className="HotelCard__Info">
                 <div className="HotelCard__Country" >

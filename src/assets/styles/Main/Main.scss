@@ -11,6 +11,7 @@
 }
 
 .HotelCard{
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     height: 31.25vw;
@@ -21,12 +22,30 @@
     color: rgba(255,255,255,1);
     font-size: 0.875rem;
     overflow: hidden;
-    object-fit: scale-down;
-    background-size: 100% 100%; //ajustar con media query
 }
 
-.test{
-    object-fit: cover;
+ .HotelCard > *{
+    z-index: 2;
+} 
+
+.HotelCard__Img{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index:1;   
+}  
+
+.HotelCard:after{
+    position: absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background: radial-gradient(224.24% 668.5% at 14.41% -14.14%, rgba(0, 0, 0, 0.57) 44.5%, rgba(255, 255, 255, 0) 67.11%);
+    z-index:1;
 }
 
 .HotelCard:last-child{
@@ -178,6 +197,10 @@
     .HotelCard{
         height: 28vw;
         justify-content: flex-end;
+    }
+
+    .HotelCard:after {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.78) 76.46%);
     }
 
     .HotelCard__Info{
