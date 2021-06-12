@@ -29,7 +29,7 @@ export const hotelsData = [
     slug: 'la-bamba-de-areco',
     name: 'La Bamba de Areco',
     photo: 'la-bamba-de-areco.jpg',
-    description: 'La Bamba de Areco está ubicada en San Antonio de Areco, en el corazón de la pampa. Es una de las estancias más antiguas de la Argentina, recientemente restaurada para ofrecer a sus huéspedes todo el confort y esplendor colonial.',
+    description: 'La Bamba de Areco is located in San Antonio de Areco, in the heart of the pampas. It is one of the oldest rooms in Argentina, recently restored to offer its guests all the comfort and colonial splendor.',
     availabilityFrom: today.valueOf(),
     availabilityTo: today.valueOf() + 864000000, // 10 days
     rooms: 11,
@@ -41,7 +41,7 @@ export const hotelsData = [
     slug: 'sainte-jeanne',
     name: 'Sainte Jeanne Boutique & Spa',
     photo: 'sainte-jeanne.jpg',
-    description: 'Sainte Jeanne Hotel Boutique & Spa está ubicado en el corazón de Los Troncos, un barrio residencial y elegante de Mar del Plata. El lujo, el confort y la pasión por los detalles dan personalidad a esta cálida propuesta.',
+    description: 'Sainte Jeanne Hotel Boutique & Spa is located in the heart of Los Troncos, an elegant residential neighborhood of Mar del Plata. Luxury, comfort and passion for details give personality to this warm proposal.',
     availabilityFrom: today.valueOf() + 864000000, // 10 days
     availabilityTo: today.valueOf() + 1296000000, // 15 days
     rooms: 23,
@@ -53,7 +53,7 @@ export const hotelsData = [
     slug: 'entre-cielos',
     name: 'Entre Cielos',
     photo: 'entre-cielos.jpg',
-    description: 'Ubicado en una de las regiones vitivinícolas más grandes de América Latina, Entre Cielos fue pensado y construido en un campo de 8 hectáreas rodeado de viñedos malbec y una imponente vista de la Cordillera de Los Andes.',
+    description: 'Located in one of the largest wine-growing regions in Latin America, Entre Cielos was designed and built on an 8-hectare field surrounded by Malbec vineyards and an imposing view of the Andes Mountains.',
     availabilityFrom: today.valueOf() + 432000000, // 5 days
     availabilityTo: today.valueOf() + 1296000000, // 15 days
     rooms: 16,
@@ -65,7 +65,7 @@ export const hotelsData = [
     slug: 'huacalera',
     name: 'Hotel Huacalera',
     photo: 'huacalera.jpg',
-    description: 'Esta casona neocolonial, construida en la década de 1940, está ubicada en el corazón de la Quebrada de Humahuaca, un extenso valle rodeado de imponentes cadenas montañosas, recorrido por el Río Grande y declarado Patrimonio de la Humanidad en 2003.',
+    description: 'This neocolonial house, built in the 1940s, is located in the heart of the Quebrada de Humahuaca, an extensive valley surrounded by imposing mountain ranges, crossed by the Rio Grande and declared a World Heritage Site in 2003.',
     availabilityFrom: today.valueOf() + 1728000000, // 20 days
     availabilityTo: today.valueOf() + 2592000000, // 30 days
     rooms: 32,
@@ -77,7 +77,7 @@ export const hotelsData = [
     slug: 'merced-del-alto',
     name: 'La Merced del Alto',
     photo: 'merced-del-alto.jpg',
-    description: 'Al pie del Nevado de Cachi, La Merced del Alto se destaca sobre el pintoresco valle rodeado de cerros, ríos y arroyos. Dominando sobre lo alto, el hotel y sus imponentes vistas invitan a explorar los Valle Calchaquíes o simplemente a disfrutar de la paz del lugar.',
+    description: 'At the foot of the Nevado de Cachi, La Merced del Alto stands out over the picturesque valley surrounded by hills, rivers and streams. Dominating over the top, the hotel and its imposing views invite you to explore the Calchaquí Valley or simply to enjoy the peace of the place.',
     availabilityFrom: today.valueOf(),
     availabilityTo: today.valueOf() + 432000000, // 5 days
     rooms: 14,
@@ -89,7 +89,7 @@ export const hotelsData = [
     slug: 'azur-real',
     name: 'Azur Real Hotel',
     photo: 'azur-real.jpg',
-    description: 'La exclusividad rodeada de historia. Azur Real Hotel Boutique está ubicado en el corazón de la zona comercial y el centro histórico de Córdoba, dentro de uno de los principales circuitos culturales y turísticos de la ciudad.',
+    description: 'Exclusivity surrounded by history. Azur Real Hotel Boutique is located in the heart of the commercial area and the historic center of Córdoba, within one of the main cultural and tourist circuits of the city.',
     availabilityFrom: today.valueOf() + 1296000000, // 15 days 
     availabilityTo: today.valueOf() + 2592000000, // 30 days
     rooms: 16,
@@ -101,7 +101,7 @@ export const hotelsData = [
     slug: 'rincon-del-socorro',
     name: 'Rincón del Socorro',
     photo: 'rincon-del-socorro.jpg',
-    description: 'Rincón del Socorro es una estancia ubicada en la reserva natural de los Esteros del Iberá, un santuario de vida silvestre, donde la Fundación Conservation Land Trust decidió desarrollar un ambicioso proyecto de recuperación y conservación.',
+    description: 'Rincón del Socorro is a ranch located in the Esteros del Iberá nature reserve, a wildlife sanctuary, where the Conservation Land Trust Foundation decided to develop an ambitious recovery and conservation project.',
     availabilityFrom: today.valueOf() + 432000000, // 5 days
     availabilityTo: today.valueOf() + 1296000000, // 15 days
     rooms: 11,
@@ -113,7 +113,7 @@ export const hotelsData = [
     slug: 'luma-casa-de-montana',
     name: 'Luma Casa de Montaña',
     photo: 'luma-casa-de-montana.jpg',
-    description: 'Emplazada en un entorno natural a orillas del lago Nahuel Huapi y con la imponente imagen de la Cordillera de Los Andes, Luma Casa de Montaña se presenta majestuosa pero a la vez simple y hogareña: un lugar diferente, atemporal y mágico.',
+    description: 'Located in a natural environment on the shores of Lake Nahuel Huapi and with the imposing image of the Andes Mountains, Luma Casa de Montaña is majestic but at the same time simple and homely: a different, timeless and magical place.',
     availabilityFrom: today.valueOf(),
     availabilityTo: today.valueOf() + 1296000000, // 15 days
     rooms: 8,
@@ -137,7 +137,7 @@ export const hotelsData = [
     slug: 'vila-da-santa',
     name: 'Vila Da Santa',
     photo: 'vila-da-santa.jpg',
-    description: 'Esta casa de pescadores fue renovada con elegancia, pero sin descuidar su espíritu original. Se abre a un gran patio central con dos piscinas de diseño, una de ellas climatizada.',
+    description: "This fisherman's house was elegantly renovated, but without neglecting its original spirit. It opens onto a large central courtyard with two designer pools, one of which is heated.",
     availabilityFrom: today.valueOf() + 864000000, // 10 days
     availabilityTo: today.valueOf() + 1296000000, // 15 days
     rooms: 19,
@@ -149,7 +149,7 @@ export const hotelsData = [
     slug: 'uxua-casa',
     name: 'UXUA Casa Hotel & Spa',
     photo: 'uxua-casa.jpg',
-    description: 'UXUA Casa Hotel & Spa es un hotel boutique cinco estrellas reconocido mundialmente por su incomparable belleza tropical, el maravilloso bar con vista al mar, el galardonado restaurante, un gimnasio totalmente equipado y el inigualable spa Almescar que ofrece innovadores tratamientos con ingredientes extraídos de la selva.',
+    description: 'UXUA Casa Hotel & Spa is a five-star boutique hotel recognized worldwide for its incomparable tropical beauty, the wonderful bar with ocean views, the award-winning restaurant, a fully equipped gym and the unique Almescar spa that offers innovative treatments with ingredients extracted from the jungle.',
     availabilityFrom: today.valueOf(),
     availabilityTo: today.valueOf() + 864000000, // 10 days
     rooms: 11,
@@ -161,7 +161,7 @@ export const hotelsData = [
     slug: 'ponta-dos-ganchos',
     name: 'Ponta dos Ganchos',
     photo: 'ponta-dos-ganchos.jpg',
-    description: 'Ubicado a pasos de San Pablo, Río de Janeiro, e incluso Buenos Aires, en una península privada y rodeado por un pintoresco pueblo de pescadores, se encuentra Ponta dos Ganchos, uno de los resorts de playa más exclusivos del sur de Brasil.',
+    description: 'Located steps away from São Paulo, Rio de Janeiro, and even Buenos Aires, on a private peninsula and surrounded by a picturesque fishing village, is Ponta dos Ganchos, one of the most exclusive beach resorts in southern Brazil.',
     availabilityFrom: today.valueOf() + 432000000, // 5 days
     availabilityTo: today.valueOf() + 864000000, // 10 days
     rooms: 25,
@@ -173,7 +173,7 @@ export const hotelsData = [
     slug: 'alto-atacama',
     name: 'Alto Atacama',
     photo: 'alto-atacama.jpg',
-    description: 'Alto Atacama Desert Lodge & Spa es un distinguido refugio ubicado a los pies del Pukará de Quitor en el imponente desierto de Atacama al norte de Chile.',
+    description: 'Alto Atacama Desert Lodge & Spa is a distinguished refuge located at the foot of the Pukará de Quitor in the imposing Atacama Desert in northern Chile.',
     availabilityFrom: today.valueOf(),
     availabilityTo: today.valueOf() + 864000000, // 10 days
     rooms: 42,
@@ -185,7 +185,7 @@ export const hotelsData = [
     slug: 'tierra-patagonia',
     name: 'Tierra Patagonia',
     photo: 'tierra-patagonia.jpg',
-    description: 'Tierra Patagonia Hotel & Spa es un lujoso hotel boutique ubicado en la Patagonia chilena a orillas del lago Sarmiento, envuelto en el extraordinario escenario natural de Torres del Paine, un parque nacional rodeado de montañas, cascadas, glaciares, lagos y peñascos, declarado Reserva de la Biosfera por la UNESCO en 1978.',
+    description: 'Tierra Patagonia Hotel & Spa is a luxurious boutique hotel located in Chilean Patagonia on the shores of Lake Sarmiento, surrounded by the extraordinary natural scenery of Torres del Paine, a national park surrounded by mountains, waterfalls, glaciers, lakes and crags, declared a Reserve of the Biosphere by UNESCO in 1978.',
     availabilityFrom: today.valueOf() + 2592000000, // 30 days
     availabilityTo: today.valueOf() + 3456000000, // 40 days
     rooms: 40,
@@ -197,7 +197,7 @@ export const hotelsData = [
     slug: 'vira-vira',
     name: 'Vira Vira',
     photo: 'vira-vira.jpg',
-    description: 'Hotel Hacienda Vira Vira Relais & Chateaux se encuentra en una ubicación privilegiada, muy cerca de Pucón, Chile. Su impresionante parque nativo de 23 hectáreas a orillas del río Liucura ofrece un oasis único de paz y tranquilidad.',
+    description: 'Hotel Hacienda Vira Vira Relais & Chateaux is located in a privileged location, very close to Pucón, Chile. Its impressive 23-hectare native park on the banks of the Liucura River offers a unique oasis of peace and tranquility.',
     availabilityFrom: today.valueOf() + 864000000, // 10 days
     availabilityTo: today.valueOf() + 1728000000, // 20 days
     rooms: 21,
@@ -209,7 +209,7 @@ export const hotelsData = [
     slug: 'vik-chile',
     name: 'Vik Chile',
     photo: 'vik-chile.jpg',
-    description: 'Vik Chile es una hacienda moderna y sofisticada en donde confluyen el arte y el diseño de vanguardia, una ubicación sin igual, fabulosos escenarios naturales, servicio personalizado y una cuidada atención por el medioambiente.',
+    description: 'Vik Chile is a modern and sophisticated hacienda where avant-garde art and design converge, an unparalleled location, fabulous natural settings, personalized service and careful attention to the environment.',
     availabilityFrom: today.valueOf() + 432000000, // 5 days
     availabilityTo: today.valueOf() + 1728000000, // 20 days
     rooms: 22,
@@ -221,7 +221,7 @@ export const hotelsData = [
     slug: 'casa-higueras',
     name: 'Casa Higueras',
     photo: 'casa-higueras.jpg',
-    description: 'Ubicada en el corazón del Cerro Alegre, frente a la imponente bahía de Valparaíso, se encuentra Casa Higueras, el primer hotel boutique y de diseño del puerto.',
+    description: "Located in the heart of Cerro Alegre, facing the imposing bay of Valparaíso, is Casa Higueras, the port's first boutique and design hotel.",
     availabilityFrom: today.valueOf() + 432000000, // 5 days
     availabilityTo: today.valueOf() + 1296000000, // 15 days
     rooms: 20,
@@ -233,7 +233,7 @@ export const hotelsData = [
     slug: 'campo-tinto',
     name: 'Campo Tinto',
     photo: 'campo-tinto.jpg',
-    description: 'Campo Tinto es una chacra de 25 hectáreas ubicada en el corazón de San Roque, en medio del ondulante Carmelo, una zona de chacras, viñedos, bodegas y frutales, con mucha historia y un ritmo de vida tranquilo y natural.',
+    description: 'Campo Tinto is a 25-hectare farm located in the heart of San Roque, in the middle of the rolling Carmelo, an area of farms, vineyards, wineries and fruit trees, with a lot of history and a calm and natural rhythm of life.',
     availabilityFrom: today.valueOf() + 2160000000, // 25 days
     availabilityTo: today.valueOf() + 2592000000, // 30 days
     rooms: 4,
