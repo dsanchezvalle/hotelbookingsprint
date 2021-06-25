@@ -3,6 +3,13 @@ import {getPriceSigns, getBackgroundImg} from '../../../assets/utils.js'
 
 const HotelCard = ({name, country, rooms, price, description, photo}) => {
     
+    const handleTap = (e) => {
+        const hotelCard = e.target.parentElement;
+        hotelCard.classList.toggle('Expanded');
+        preventScroll();
+        e.target.innerHTML= hotelCard.classList.contains('Expanded')?"<":"+";
+    }
+    
     return (
         <article className="HotelCard">
             <img className="HotelCard__Img" src={require(`../../../assets/images/Main/Hotels/${photo}`)} alt="photoHotel" />
@@ -21,9 +28,15 @@ const HotelCard = ({name, country, rooms, price, description, photo}) => {
                 </div>
                 <p className="HotelCard__Description">{description}</p>
             </section>
-            <button className="HotelCard__Button">Book it!</button>
+            <button className="HotelCard__More" id="HotelCard__More" onClick={handleTap}>+</button>
+            <button className="HotelCard__Book">Book it!</button>
         </article>
     );
 }
 
 export default HotelCard;
+
+function preventScroll(){
+    window.scrollTo(0, 0);
+    window.addEventListener('scroll', ()=>{window.scrollTo(0, 0);});
+}
