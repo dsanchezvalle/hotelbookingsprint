@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import HotelCard from '../HotelCard/HotelCard'
 
 const HotelList = ({filteredHotels}) => {
