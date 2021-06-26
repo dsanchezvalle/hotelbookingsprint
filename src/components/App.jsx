@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import '../assets/styles/App.scss';
 import Header from './Header/Header';
 import Main from './Main/Main';
@@ -7,7 +7,7 @@ import HotelList from './Main/HotelList/HotelList';
 
 const App = () => {
     const [filterList, setFilterList ] = useState (filtersData);
-    
+
     const handleGlobalFilters = (filterId, filterValue) => {
         
         let newFilterList = filterList.map(filter => {
