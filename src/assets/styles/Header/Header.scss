@@ -36,6 +36,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background: url("../../images/Header/checkin.svg") no-repeat;
     border: 1px solid rgb(128, 128, 128);
     padding-left: 1.5rem !important;
+    width: 100%;
 }
 
 .Filter__DateTo{
@@ -44,6 +45,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background: url("../../images/Header/checkout.svg") no-repeat;
     border: 1px solid rgb(128, 128, 128);
     padding-left: 1.5rem !important;
+    width: 100%;
 }
 
 .Filter__Sizes{
