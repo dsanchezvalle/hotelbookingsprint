@@ -6,7 +6,7 @@ const HotelCard = ({name, country, rooms, price, description, photo}) => {
     const handleTap = (e) => {
         const hotelCard = e.target.parentElement;
         hotelCard.classList.toggle('Expanded');
-        preventScroll();
+        hotelCard.classList.contains('Expanded')?preventScroll():restartScroll();
         e.target.innerHTML= hotelCard.classList.contains('Expanded')?"<":"+";
     }
     
@@ -38,5 +38,13 @@ export default HotelCard;
 
 function preventScroll(){
     window.scrollTo(0, 0);
-    window.addEventListener('scroll', ()=>{window.scrollTo(0, 0);});
+    window.addEventListener('scroll', scrollToTop);
+}
+
+function scrollToTop(){
+    window.scrollTo(0, 0);
+}
+
+function restartScroll(){
+    window.removeEventListener('scroll', scrollToTop);
 }
