@@ -76,6 +76,13 @@ const filterHotels = (hotelList, filterList) => {
         filteredHotelList4 = filteredHotelList3;
     }
     else{
+        if(!verifyMinDate(filterList[3].value)){
+            alert("Error. The check-in date cannot be earlier than today");
+            filterList[3].value = "";
+            filterList[4].value = "";
+            return filteredHotelList3;
+        }
+
         if(verifyDateRange(getUnixDate(filterList[3].value), getUnixDate(filterList[4].value)) === "error"){
             alert("Error. The check-out date cannot be earlier than the check-in date.")
             filterList[3].value = "";
@@ -167,7 +174,25 @@ function verifyDateRange(dateFrom, dateTo) {
     return dateFrom > dateTo ? "error" : "dates ok";
   }
 
+  function verifyMinDate(fromDate){
+    let today = new Date();
+    let selectedDate = new Date(fromDate);
+    
+    return (sameDay(today, selectedDate) || selectedDate > today);
+  }
+
   function getUnixDate(date) {
     return new Date(date).getTime();
   }  
   
+  function sameDay(day1, day2) {
+    //We add these hours to adjust the Timezone Offset
+    let hoursToAdd = day2.getTimezoneOffset() / 60;
+    day2.setHours(day2.getHours() + hoursToAdd);
+    
+    return (
+      day1.getFullYear() === day2.getFullYear() &&
+      day1.getMonth() === day2.getMonth() &&
+      day1.getDate() === day2.getDate()
+    );
+  }
