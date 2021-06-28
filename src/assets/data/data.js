@@ -1,4 +1,3 @@
-
 const today = new Date();
 
 export const filtersData = [

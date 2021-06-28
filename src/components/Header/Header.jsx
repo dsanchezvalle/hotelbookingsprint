@@ -1,10 +1,15 @@
+//Dependencies
 import React, {useState} from 'react';
+//Styles
 import '../../assets/styles/Header/Header.scss';
+//Utils
+import { getFormattedToday, getCountryString, getSizeString, getPriceString, getDateString } from '../../assets/utils';
 
 const Header = ({filters, onFilter, onClearFilter}) => {
+   //State
+    const [countryFilter, priceFilter, sizeFilter, dateFromFilter, dateToFilter] = filters;
    
-   const [countryFilter, priceFilter, sizeFilter, dateFromFilter, dateToFilter] = filters;
-      
+   //Handlers
    const handleFilters = (e) => {
     onFilter(e.target.id, e.target.value); 
    }
@@ -52,83 +57,3 @@ const Header = ({filters, onFilter, onClearFilter}) => {
 }
 
 export default Header;
-
-function getFormattedToday(){
-    return formatDate(new Date().toLocaleDateString());
-}
-
-function formatDate(date) {
-  var d = new Date(date),
-    month = "" + (d.getMonth() + 1),
-    day = "" + d.getDate(),
-    year = d.getFullYear();
-
-  if (month.length < 2) month = "0" + month;
-  if (day.length < 2) day = "0" + day;
-
-  return [year, month, day].join("-");
-}
-
-//Send to utils
-const getCountryString = (countryValue) =>{
-    switch(countryValue){
-        case "country1":
-            return "Argentina";
-        case "country2":
-            return "Brasil";
-        case "country3":
-            return "Chile";
-        case "country4":
-            return "Uruguay";
-        default:
-            return "all countries";
-    }
-}
-
-const getSizeString = (sizeValue) => {
-
-    switch(sizeValue){
-        case "size1":
-            return "Small-sized";
-        case "size2":
-            return "Medium-sized";
-        case "size3":
-            return "Large-sized";
-        case "all":
-            return "All sizes";    
-    }
-}
-
-const getPriceString = (priceValue) => {
-    switch(priceValue){
-        case "price1":
-            return "economic";
-        case "price2":
-            return "comfort";
-        case "price3":
-            return "premium";
-        case "price4":
-            return "deluxe";
-        case "all":
-            return "all category"                
-    }
-}
-
-const getDateString = (dateFromValue, dateToValue) =>{
-    
-    //Create and adjust dates to UTC Offset.
-    let dateFrom = new Date(dateFromValue);
-    dateFrom.setHours(dateFrom.getHours()+(dateFrom.getTimezoneOffset()/60));
-    let dateTo = new Date(dateToValue);
-    dateTo.setHours(dateTo.getHours()+(dateTo.getTimezoneOffset()/60));
-    
-    //Define arguments to send to Intl.DateTimeFormat according to expected string
-    let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-
-    if(dateFromValue !== "" && dateToValue !== ""){
-        let dateFromString = new Intl.DateTimeFormat('en-US', options).format(dateFrom);
-        let dateToString = new Intl.DateTimeFormat('en-US', options).format(new Date(dateTo));
-        return `from ${dateFromString} to ${dateToString}`;
-    }
-    return "";
-}
