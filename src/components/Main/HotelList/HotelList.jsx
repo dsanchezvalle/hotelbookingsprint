@@ -1,4 +1,6 @@
+//Dependencies
 import React from 'react';
+//Components
 import HotelCard from '../HotelCard/HotelCard'
 
 const HotelList = ({filteredHotels}) => {

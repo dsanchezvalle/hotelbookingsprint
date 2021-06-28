@@ -1,12 +1,14 @@
+//Dependencies
 import React from 'react';
-import {getPriceSigns, getBackgroundImg} from '../../../assets/utils.js'
+//Utils
+import {getPriceSigns, preventScroll, restartScroll} from '../../../assets/utils.js'
 
 const HotelCard = ({name, country, rooms, price, description, photo}) => {
-    
+    //Handler
     const handleTap = (e) => {
         const hotelCard = e.target.parentElement;
         hotelCard.classList.toggle('Expanded');
-        preventScroll();
+        hotelCard.classList.contains('Expanded')?preventScroll():restartScroll();
         e.target.innerHTML= hotelCard.classList.contains('Expanded')?"<":"+";
     }
     
@@ -35,8 +37,3 @@ const HotelCard = ({name, country, rooms, price, description, photo}) => {
 }
 
 export default HotelCard;
-
-function preventScroll(){
-    window.scrollTo(0, 0);
-    window.addEventListener('scroll', ()=>{window.scrollTo(0, 0);});
-}

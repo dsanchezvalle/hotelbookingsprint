@@ -1,8 +1,13 @@
+//Dependencies
 import React, {useEffect} from 'react';
+//Styles
 import '../../assets/styles/Main/Main.scss'
+//Utils
+import { fadeOutHoverInfoMsg } from '../../assets/utils';
 
 const Main = ({hotels}) => {
-
+    
+    //Effect
     useEffect(()=>{
         fadeOutHoverInfoMsg();    
     }, []);
@@ -22,14 +27,5 @@ const Main = ({hotels}) => {
 
 export default Main;
 
-function fadeOutHoverInfoMsg() {
-    let infoMsg = document.querySelector(".InfoMessage");
-    setTimeout (()=>{
-        infoMsg.style.transition = "all 0.5s ease-out";
-        infoMsg.style.height=0;
-        infoMsg.style.marginTop="-0.2rem";
-        infoMsg.style.opacity=0;
-        infoMsg.style.padding=0;  
-    }, 4000) ;
-}
+
 
