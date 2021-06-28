@@ -36,7 +36,24 @@ module.exports = {
                   'css-loader',
                   'sass-loader',
                 ],
+            },
+            {
+                test: /\.svg$/,
+                use: [
+                  { 
+                      loader: 'svg-url-loader', 
+                      options: { 
+                          limit: 10000,
+                        }, 
+                    },
+                  
+                ],
+            },
+            {
+                test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+                type: 'asset/inline'
             }
+            
         ]
     },
     plugins: [

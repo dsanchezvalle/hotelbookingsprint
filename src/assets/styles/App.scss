@@ -1,9 +1,46 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+:root{
+    /* Colors */
+    --main-bg-color: rgba(255, 255, 255, 1);
+    --primary-btn-color: rgba(51, 51, 51, 0.88);;
+
+    /* Fonts */
+    --main-font: 'Roboto', sans-serif;
+    --title-font: 'Pacifico', cursive;
+    --found-message-font: 'Dancing Script', cursive;
+
+    /* Mobile font-sizes and line-heights (Mobile first approach) */
+    font-size: 16px; /*Base-Reference font size*/
+    --main-title-font-sm: 1.875rem;
+    --main-title-font-md: 2.91rem;
+    --main-title-font-lg: 4.5rem;
+    --main-title-font-xl: 6rem;
+
+    --filter-font-sm: 0.875rem;
+    --filter-font-lg: 0.93rem;
+    --filter-font-xl: 1.1rem;
+
+    --filter-font-btn-sm: var(--filter-font-sm);
+    --filter-font-btn-lg: 1.125rem;
+
+    --header-bkgd-img-size-sm: 100% 100%;
+    --header-bkgd-img-size-md: 100% 125%;
+    --header-bkgd-img-size-lg: 100% 150%;
+
+    --filter-icon-bkgd-size-sm: 0.875rem 1rem;
+    --filter-icon-bkgd-size-lg: 1rem 1rem;
+} 
+/* || General Styles */
+* {
     box-sizing: border-box;
-    margin:0;
-    padding:0;
+    padding: 0;
+    margin: 0;
+    font-family: var(--main-font);
 }
 
-h1{
-    background-color: blue;
+#app{
+    overflow: hidden;
 }
