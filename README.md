@@ -6,6 +6,10 @@ Book it! is a ReactJS App with a responsive web design that allows you to filter
 
 The live demo of the project is hosted in Github Pages at: [Access to the Live Demo](https://dsanchezvalle.github.io/hotelbookingsprint/)
 
+## Figma Design
+
+Check the Figma Design of the project at: [Book It! - Figma](https://www.figma.com/file/Nhnh2aSpSlgrtNaaDGXG4v/Book-It)
+
 ## Responsive Web Design
 https://user-images.githubusercontent.com/67490820/123575560-a993c780-d797-11eb-827d-deb96b8cb8d2.mp4
 
@@ -17,7 +21,7 @@ https://user-images.githubusercontent.com/67490820/123575618-bdd7c480-d797-11eb-
 
 ## Trello Board
 
-You can access to the planning of the project at: [Trello project board](https://trello.com/b/JZAn9AL7/hotel-booking-sprint-2)
+You can access the planning of the project at: [Trello project board](https://trello.com/b/JZAn9AL7/hotel-booking-sprint-2)
 
 ## Author
 
